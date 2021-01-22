@@ -47,7 +47,7 @@ def categoria1():
             completed = True
         db,c = get_db()
         c.execute(
-            'delete from partida where categoria=%s',('Entretenimiento',)
+            'delete from partida where user_id = %s and categoria = %s',(session.get('user_id'),'Entretenimiento')
         )
         db.commit()
         db,c = get_db()
@@ -90,7 +90,7 @@ def categoria2():
             completed = True
         db,c = get_db()
         c.execute(
-            'delete from partida where categoria=%s',('Comida',)
+            'delete from partida where user_id = %s and categoria = %s',(session.get('user_id'),'Comida')
         )
         db.commit()
         c.execute(
@@ -132,7 +132,7 @@ def categoria3():
             completed = True
         db,c = get_db()
         c.execute(
-            'delete from partida where categoria=%s',('lol',)
+            'delete from partida where user_id = %s and categoria = %s',(session.get('user_id'),'lol')
         )
         db.commit()
         c.execute(
