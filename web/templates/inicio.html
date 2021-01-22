@@ -29,13 +29,11 @@
             </thead>
             <tbody>
                 {% for user in user %}
-                {% if user['completed'] == 1 %}
                 <tr>
                     <td> {{user['username']}} </td>
                     <td> {{user['categoria']}} </td>
                     <td> {{user['tiempo']}} </td>
                 </tr>
-                {% endif %}
                 {% endfor %}
             </tbody>               
         </body>
